@@ -131,9 +131,19 @@ a:link, a:visited, a:hover, a:active {
   transition: all 0.3s;
 }
 
+.item > a::before {
+  content: 'MORE';
+  position: absolute;
+  display: none;
+}
+
 .item > a:hover {
   box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
+}
+
+.item > a::before:hover {
+  display: inline-block;
 }
 
 .item-maindish, .item-maindish .category::before {
